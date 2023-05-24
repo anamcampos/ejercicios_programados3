@@ -9,14 +9,16 @@ millas.1 Milla equivale a 1.6093 Kilómetros.
     public static void main(String[]args){
         Scanner input = new Scanner (System.in);
         int repetir = 1;
-      
 
         while (repetir !=0){
             System.out.println("Ingrese un valor en millas o bien, 0 para salir");
             double millas = input.nextInt();
-            if (millas==0){
+            if (millas<=0){
+                System.out.println(" ingrese un valor positivo");
+                millas = input.nextInt();
+            } else if (millas==0){
                 repetir = 0;
-            } else if (millas>0) {
+            } else {
             double km = millas * 1.6093;
             System.out.println("El valor en kilometros es: "+km);
             }

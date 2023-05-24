@@ -9,6 +9,10 @@ public class ejerciciotres {
 
         System.out.println("Ingrese un numero entero ");
         int num = input.nextInt();
+        while (num<=0){
+        System.out.println("Ingrese un numero entero positivo ");
+        num = input.nextInt();
+        }
 
         if (num%3==0){
             System.out.println("El numero es multiplo de 3");
